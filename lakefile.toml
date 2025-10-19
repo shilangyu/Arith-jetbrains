@@ -1,0 +1,6 @@
+name = "Arith-jetbrains"
+version = "0.1.0"
+defaultTargets = ["arith-jetbrains"]
+
+[[lean_lib]]
+name = "ArithJetbrains"
