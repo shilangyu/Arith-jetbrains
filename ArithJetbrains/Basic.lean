@@ -124,15 +124,7 @@ theorem step_eval : ∀ ctx t t',
     Step ctx t t' →
     eval ctx t = eval ctx t' := by
     intro ctx t t' h
-    induction h <;> simp [*]
-    case condTrue hcmp =>
-      simp at hcmp
-      rw [hcmp]
-      intro; contradiction
-    case condFalse hcmp =>
-      simp at hcmp
-      rw [hcmp]
-      intro; contradiction
+    induction h <;> repeat simp [*] at *
 
 -- correctness of the small-step semantics
 theorem step_correct : ∀ ctx t t' n,
